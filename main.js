@@ -130,7 +130,7 @@ const cards = [
     },
     {
         questionTitle: 'Vírus da Imunodeficiência Humana',
-        question: 'Por que o nosso sistema imune nãocontrola a infecção?',
+        question: 'Por que o nosso sistema imune não controla a infecção?',
         answer: `1- Hipermutabilidade do HIV- Alta taxa de mutação, e os anticorpos são ineficazes.\n
                  2- O Vírus consegue evitar o ataque das TCD8.\n
                  3- Inibição das citocinas liberadas pelo Th1.\n
@@ -157,7 +157,7 @@ const cards = [
     {
         questionTitle: 'Vírus da Imunodeficiência Humana',
         question: 'Qual a importância dos Co-receptores?',
-        answer: `-É por causa dos receptores que o vírus entra nas células. Como o CCR5 presente nos Macrófagos,Monócitos, 
+        answer: ` É por causa dos receptores que o vírus entra nas células. Como o CCR5 presente nos Macrófagos,Monócitos, 
         Células dentriticas e Linfócitos Thelper, e o CXCR4 presente nos Thelper.`,
         image: '../img/fotoHIV.png'
 
@@ -180,7 +180,7 @@ const cards = [
     },
     {
         questionTitle: 'Vírus da Imunodeficiência Humana',
-        question: '-Como ocorre a transmissão?',
+        question: ' Como ocorre a transmissão?',
         answer: `Sexual (transmissão por fluídos),
                 Vertical (Mãe para filho), 
                 Parenteral(sangue contaminado) e Ocupacional`,
@@ -189,7 +189,7 @@ const cards = [
     },
     {
         questionTitle: 'Vírus da Imunodeficiência Humana',
-        question: '-Quais as células que o HIV infecta?',
+        question: ' Quais as células que o HIV infecta?',
         answer: `Infecta Macrófagos,Monócitos,Células Dentriticas e Linfócitos Thelper.`,
         image: '../img/fotoHIV.png'
 
@@ -209,7 +209,7 @@ const cards = [
     {
         questionTitle: 'Dengue',
         question: 'Qual o tipo de choque que ocorre na dengue?',
-        answer: `O choque típico da dengue é o Hipovolêmico (diminuição do volume sanguíneo), mas também
+        answer: ` O choque típico da dengue é o Hipovolêmico (diminuição do volume sanguíneo), mas também
                 pode ser o choque Séptico (Ocorre da liberação exacerbada de mediadores)`,
         image: '../img/fotoDengue.png'
 
@@ -251,21 +251,21 @@ const cards = [
     {
         questionTitle: 'Mycobacterium tuberculosis ',
         question: ' Quais são as características?',
-        answer: `-BAAR de Ziehl-Neelsen, bacilo estreito,alongado,não esporulado,não encapsulado,imóvel,aeróbio
+        answer: ` BAAR de Ziehl-Neelsen, bacilo estreito,alongado,não esporulado,não encapsulado,imóvel,aeróbio
                 estrito,parasita intracelular facultativo, parede celular com ácido micólico, sensível à radiação solar e ventilação.`,
         image: '../img/fotoTuberc.jpeg'
     },
     {
         questionTitle: 'Mycobacterium tuberculosis ',
         question: ' Como é transmitida?',
-        answer: `Pela inalação dos bacilos que são eliminados por tosse,espirro,fala por uma
+        answer: ` Pela inalação dos bacilos que são eliminados por tosse,espirro,fala por uma
                 pessoa com a tuberculose ativa(sem tratamento).`,
         image: '../img/fotoTuberc.jpeg'
     },
     {
         questionTitle: 'Mycobacterium tuberculosis ',
         question: ' Quais são as prevenções?',
-        answer: `Vacina BCG, identificar casos suspeitos,diagnóstico precoce e início
+        answer: ` Vacina BCG, identificar casos suspeitos,diagnóstico precoce e início
                 do tratamento,contato em locais abertos,ventilados.
 `,
         image: '../img/fotoTuberc.jpeg'
