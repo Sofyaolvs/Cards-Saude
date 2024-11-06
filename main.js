@@ -334,13 +334,13 @@ const cardElement = document.getElementById('card');
 const nextCardBtn = document.getElementById('nextCardBtn');
 const imageElement = document.getElementById('image');  // Elemento de imagem
 
-
 let currentIndex = 0;
 
 // Função para sortear um cartão aleatório
 function drawRandomCard() {
-    const randomIndex = Math.floor(Math.random() * cards.length); // Gera um índice aleatório
-    const card = cards[randomIndex]; // Seleciona o cartão aleatório
+    // Gera um índice aleatório
+    currentIndex = Math.floor(Math.random() * cards.length); 
+    const card = cards[currentIndex]; // Seleciona o cartão aleatório
 
     // Atualiza o conteúdo do cartão com a pergunta
     questionTitleElement.textContent = card.questionTitle;
@@ -354,8 +354,8 @@ function drawRandomCard() {
 
 // Função para mostrar a resposta
 function showAnswer() {
-    const currentCard = cards.find(card => card.questionTitle === questionTitleElement.textContent);
-    answerElement.textContent = currentCard.answer;
+    const card = cards[currentIndex];  // Obtém o cartão atual usando o índice
+    answerElement.textContent = card.answer;  // Atualiza a resposta
     cardElement.classList.add('flipped'); // Vira o cartão para mostrar a resposta
 }
 
@@ -367,6 +367,10 @@ nextCardBtn.addEventListener('click', () => {
 
 // Adiciona um evento de clique ao cartão para mostrar a resposta
 cardElement.addEventListener('click', showAnswer);
+
+// Sorteia o primeiro cartão quando a página carrega
+window.onload = drawRandomCard;
+
 
 // Sorteia o primeiro cartão quando a página carrega
 window.onload = drawRandomCard; 
