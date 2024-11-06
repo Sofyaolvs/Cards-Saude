@@ -335,6 +335,7 @@ const nextCardBtn = document.getElementById('nextCardBtn');
 const imageElement = document.getElementById('image');  // Elemento de imagem
 
 let currentIndex = 0;
+let showingAnswer = false; // Variável para controlar se a resposta está sendo exibida
 
 // Função para sortear um cartão aleatório
 function drawRandomCard() {
@@ -350,13 +351,22 @@ function drawRandomCard() {
 
     // Remove a classe 'flipped' para garantir que o cartão esteja na frente
     cardElement.classList.remove('flipped');
+    showingAnswer = false; // Reseta para não mostrar a resposta
 }
 
 // Função para mostrar a resposta
 function showAnswer() {
-    const card = cards[currentIndex];  // Obtém o cartão atual usando o índice
-    answerElement.textContent = card.answer;  // Atualiza a resposta
-    cardElement.classList.add('flipped'); // Vira o cartão para mostrar a resposta
+    if (!showingAnswer) {
+        const card = cards[currentIndex];  // Obtém o cartão atual usando o índice
+        answerElement.textContent = card.answer;  // Atualiza a resposta
+        cardElement.classList.add('flipped'); // Vira o cartão para mostrar a resposta
+        showingAnswer = true; // Marca que a resposta está sendo exibida
+    } else {
+        // Se já estiver mostrando a resposta, volte para a pergunta
+        answerElement.textContent = 'Resposta aparecerá aqui.';
+        cardElement.classList.remove('flipped'); // Vira o cartão para mostrar a pergunta
+        showingAnswer = false; // Marca que estamos de volta à pergunta
+    }
 }
 
 // Evento para o botão "Próxima Pergunta"
@@ -365,13 +375,9 @@ nextCardBtn.addEventListener('click', () => {
     answerElement.textContent = 'Resposta aparecerá aqui.'; // Reseta a resposta
 });
 
-// Adiciona um evento de clique ao cartão para mostrar a resposta
+// Adiciona um evento de clique ao cartão para mostrar ou voltar à pergunta
 cardElement.addEventListener('click', showAnswer);
 
 // Sorteia o primeiro cartão quando a página carrega
 window.onload = drawRandomCard;
-
-
-// Sorteia o primeiro cartão quando a página carrega
-window.onload = drawRandomCard; 
 
